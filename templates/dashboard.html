@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="dashboard">
+    <h1>Dashboard</h1>
+    <p class="welcome">Signed in as <strong>{{ user }}</strong></p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Users</h3>
+            <p>1,248</p>
+        </div>
+        <div class="card">
+            <h3>Active Sessions</h3>
+            <p>92</p>
+        </div>
+        <div class="card">
+            <h3>Alerts</h3>
+            <p class="alert">5</p>
+        </div>
+    </div>
+
+    <div class="warning">
+        ⚠ Broken Access Control: This dashboard is accessible even without authentication.
+    </div>
+</section>
+
+{% endblock %}
