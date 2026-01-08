@@ -1,4 +1,25 @@
-horoq
-{% if session.user %} Logout {% endif %}
-{% block content %}{% endblock %}
-Â© 2025 horoq
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title or "horoq" }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">horoq</div>
+    {% if session.user %}
+        <a class="logout" href="/logout">Logout</a>
+    {% endif %}
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    © 2025 horoq
+</footer>
+
+</body>
+</html>
