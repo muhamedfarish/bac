@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ title or "horoq" }}</title>
+    <title>horoq</title>
     <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 <header class="topbar">
     <div class="brand">horoq</div>
-    {% if session.user %}
-        <a class="logout" href="/logout">Logout</a>
-    {% endif %}
+    <a class="logout" href="/logout">Logout</a>
 </header>
 
 <main>
@@ -18,7 +17,7 @@
 </main>
 
 <footer>
-    © 2025 horoq
+    © 2025 horoq Technologies
 </footer>
 
 </body>
