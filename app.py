@@ -13,7 +13,7 @@ USER = {
 
 # Simulated DB
 USERS = {
-    "1": {"name": "Farish", "email": "farish@horoq.io", "role": "user"},
+    "1": {"name": "Smith", "email": "smith@horoq.io", "role": "user"},
     "2": {"name": "Ayaan", "email": "ayaan@horoq.io", "role": "user"},
     "3": {"name": "Admin", "email": "admin@horoq.io", "role": "admin"}
 }
