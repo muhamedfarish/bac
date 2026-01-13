@@ -3,15 +3,13 @@ from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = "horoq_secret_key"
 
-# ❌ Hardcoded admin credentials
 USER = {
     "id": "3",
-    "username": "root",
-    "password": "root123",
+    "username": "admin",
+    "password": "admin",
     "role": "admin"
 }
 
-# Simulated DB
 USERS = {
     "1": {"name": "Farish", "email": "farish@horoq.io", "role": "user"},
     "2": {"name": "Ayaan", "email": "ayaan@horoq.io", "role": "user"},
@@ -29,7 +27,6 @@ def login():
         session["role"] = USER["role"]
     return redirect("/dashboard")
 
-# ❌ Broken Access Control (intentional)
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
@@ -40,7 +37,6 @@ def admin_panel():
     admin = USERS.get(admin_id)
     return render_template("admin.html", admin=admin, admin_id=admin_id)
 
-# ❌ IDOR
 @app.route("/admin/view-profile")
 def view_profile():
     user_id = request.args.get("user_id")
