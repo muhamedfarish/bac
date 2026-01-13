@@ -9,13 +9,16 @@
 
 <header class="topbar">
     <div class="brand">horoq</div>
-    <a class="logout" href="/logout">Logout</a>
+
+    {# ✅ Logout hidden ONLY on login page #}
+    {% if request.path != "/" %}
+        <a class="logout" href="/logout">Logout</a>
+    {% endif %}
 </header>
 
 <main>
     {% block content %}{% endblock %}
 </main>
-
 
 </body>
 </html>
