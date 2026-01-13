@@ -10,7 +10,6 @@
 <header class="topbar">
     <div class="brand">horoq</div>
 
-    {# ✅ Logout hidden ONLY on login page #}
     {% if request.path != "/" %}
         <a class="logout" href="/logout">Logout</a>
     {% endif %}
